@@ -16,10 +16,8 @@ import java.util.logging.Level;
 
 public class JMCnetworker{
 
-    private static boolean DEBUG = true;
-
     private record Connection(JMCnetworkserver server, JunctionBridge bridge){}
-    private class Timeout{
+    private static class Timeout{
 
         private final String failMsg;
         private long endAt;
@@ -47,7 +45,7 @@ public class JMCnetworker{
             else if(this.attempts < 10)timeoutS = 30;
             else timeoutS = 60;
 
-            if(JMCnetworker.DEBUG){
+            if(JMCapi.getInstance().isDebug()){
                 if(this.attempts < 10){
                     JMCapi.getInstance().getPlugin().getLogger().log(Level.WARNING, this.failMsg, this.attempts <= 1 ? e : null);
                     JMCapi.getInstance().getPlugin().getLogger().log(Level.WARNING, "Retrying in " + timeoutS + " seconds...");

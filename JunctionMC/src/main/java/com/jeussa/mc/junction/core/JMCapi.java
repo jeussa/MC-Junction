@@ -63,6 +63,14 @@ public class JMCapi implements JunctionAPI{
 
 
     /**
+     * Debug
+     */
+    public boolean isDebug(){
+        return this.config.getBoolean("debug", false);
+    }
+
+
+    /**
      * Network
      */
     @Override

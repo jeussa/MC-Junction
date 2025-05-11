@@ -1,0 +1,6 @@
+name: JunctionMC
+version: 1.0.0
+main: com.jeussa.mc.junction.bungee.JMC
+author: jeussa
+description: jeussa's networking tool
+website: jeussa.com

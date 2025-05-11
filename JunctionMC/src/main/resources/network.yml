@@ -1,0 +1,37 @@
+network-name: "jeussa's Server Network"
+config-version: 1
+key: wernioujwehrfiuowehfiuohwifh
+
+network:
+  proxy-eu:
+    role: proxy
+    host: 192.168.1.10
+    port: 5020
+    children:
+      survival:
+        role: backend
+        lives-with-parent: true
+      plots:
+        role: backend
+        lives-with-parent: true
+      proxy-ca:
+        role: proxy
+        host: 127.0.0.1
+        port: 5020
+        lives-with-parent: false
+        children:
+          dvz1:
+            role: backend
+            lives-with-parent: true
+          dvz2:
+            role: backend
+            lives-with-parent: true
+          dvztest:
+            role: backend
+            lives-with-parent: true
+          testmaps:
+            role: backend
+            lives-with-parent: true
+          hub:
+            role: backend
+            lives-with-parent: true

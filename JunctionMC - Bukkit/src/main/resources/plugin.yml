@@ -1,0 +1,17 @@
+name: JunctionMC
+version: 1.0.0
+main: com.jeussa.mc.junction.bukkit.JMC
+api-version: '1.21'
+author: jeussa
+description: jeussa's networking tool
+website: jeussa.com
+
+commands:
+  junction:
+    aliases: [jmc]
+    description: Main JunctionMC command
+    usage: |
+      /junction network
+      /junction status
+  jtest:
+    description: test command
